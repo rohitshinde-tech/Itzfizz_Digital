@@ -1,207 +1,371 @@
-# ITZFIZZ DIGITAL — Next-Gen Scroll-Driven Hero Animation
+# ITZFIZZ DIGITAL — Scroll-Driven Hero Section
 
-A production-grade, scroll-driven interactive hero section engineered with **React**, **Tailwind CSS**, **GSAP (ScrollTrigger)**, and **Lenis** smooth scroll. Built with an obsessive focus on 60fps rendering performance, sub-pixel motion precision, accessibility, and modern frontend architecture.
+A modern, interactive **scroll-driven hero section** built using **React, Tailwind CSS, GSAP ScrollTrigger, and Lenis Smooth Scroll**.
 
-[![Deploy to GitHub Pages](https://github.com/rohitshinde/Itzfizz_Digital/actions/workflows/deploy.yml/badge.svg)](https://github.com/rohitshinde/Itzfizz_Digital/actions/workflows/deploy.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-CCFF00.svg)](LICENSE)
+The project focuses on creating a premium web experience with **smooth scrolling, scroll-based animations, animated statistics, responsive layouts, and performance-optimized interactions**.
+
+* **Live Demo:** https://rohitshinde-tech.github.io/Itzfizz_Digital/
+* **Repository:** https://github.com/rohitshinde-tech/Itzfizz_Digital
+
+## ✨ Features
+
+* **Full-screen hero section** that fills the first screen above the fold.
+* **Letter-spaced headline**:
+
+  * `W E L C O M E  I T Z F I Z Z`
+* **Staggered letter animation** on page load.
+* Letters smoothly **rise and fade into view**.
+* **Animated statistics** that appear sequentially.
+* Statistics include **animated counters** that count from `0` to their target values.
+* **Scroll-driven main visual** controlled by the user's scroll position.
+* Main visual **moves, scales, and rotates** according to scroll progress.
+* **Pinned hero section** using GSAP ScrollTrigger.
+* **Scrubbed GSAP timeline** for smooth scroll-linked animation.
+* **Lenis smooth scrolling** for a premium scrolling experience.
+* **Parallax effects** for statistics and other elements.
+* **Scroll progress indicator** showing the current scroll position.
+* **Responsive design** for:
+
+  * Desktop
+  * Tablet
+  * Mobile
+* **Reduced-motion support** using `prefers-reduced-motion`.
+* **Performance optimized** using transform and opacity-based animations.
+* **Extra filler sections** to demonstrate the complete scroll experience.
 
 ---
 
-## ⚡ Live Demo & Visuals
+## 🛠️ Tech Stack
 
-- **Live URL**: [https://<username>.github.io/Itzfizz_Digital/](https://rohitshinde.github.io/Itzfizz_Digital/) *(Replace with your GitHub repository URL)*
-- **Interactive Showcase**:
-  - High-precision per-letter masked typographic rising reveal (`WELCOME ITZFIZZ`)
-  - Multi-axis curved scroll-driven speedform vector navigation
-  - Zero-re-render direct DOM numeric counter interpolation
-  - Lenis scroll inertia synchronized with GSAP's central RAF ticker
-  - Fully responsive `matchMedia` choreography for desktop and mobile viewports
+### Frontend
 
----
+* **React 18** — Component-based UI development.
+* **Vite** — Fast development server and production build tool.
+* **Tailwind CSS 3** — Utility-first CSS framework.
+* **HTML5** — Page structure and semantic markup.
+* **CSS3** — Custom styling and responsive design.
+* **JavaScript** — Application logic and interactions.
 
-## 🛠️ Tech Stack & Architecture
+### Animation
 
-| Technology | Purpose | Implementation Highlight |
-|---|---|---|
-| **React 18** | UI component architecture | Declarative modularity, strict refs isolation |
-| **Vite 6** | Build toolchain & dev server | Instant HMR, optimized Rollup bundling |
-| **GSAP 3.12** | Motion orchestration & physics | Master intro timeline & pinned ScrollTrigger |
-| **@gsap/react** | React integration | Safe lifecycle-bound cleanup (`useGSAP` / `gsap.context`) |
-| **Lenis** | Inertia smooth scrolling | Driven directly by `gsap.ticker` to prevent frame drift |
-| **Tailwind CSS 3** | Atomic styling & theme design | Obsidian dark palette, electric lime (`#CCFF00`) accent |
-| **SVG Vector Engine** | Bespoke aerodynamic concept | Scalable 4K vector with bloom & dynamic contact shadow |
+* **GSAP** — High-performance animation library.
+* **GSAP ScrollTrigger** — Scroll-based and pinned animations.
+* **@gsap/react** — React integration using `useGSAP`.
+* **Lenis** — Smooth and inertia-based scrolling.
 
 ---
 
-## 🚀 Getting Started Locally
+## 🚀 Getting Started
 
 ### Prerequisites
-- **Node.js**: v18.0.0 or higher (v20+ recommended)
-- **npm**: v9.0.0 or higher
 
-### Installation & Run
+Make sure you have the following installed:
+
+* **Node.js 18 or higher**
+* **npm 9 or higher**
+* **Git**
+
+You can verify your versions using:
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/<username>/Itzfizz_Digital.git
+node --version
+npm --version
+git --version
+```
+
+---
+
+## 📥 Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/rohitshinde-tech/Itzfizz_Digital.git
+```
+
+### 2. Navigate to the project
+
+```bash
 cd Itzfizz_Digital
+```
 
-# 2. Install dependencies
+### 3. Install dependencies
+
+```bash
 npm install
+```
 
-# 3. Start the local development server (with HMR)
+### 4. Start the development server
+
+```bash
 npm run dev
 ```
 
-Visit `http://localhost:3000` in your browser.
+Then open the local development URL shown in your terminal, typically:
 
-### Production Build & Preview
-
-```bash
-# Build optimized production bundle to /dist
-npm run build
-
-# Preview the production build locally
-npm run preview
+```text
+http://localhost:5173
 ```
 
 ---
 
-## 🌐 Deployment to GitHub Pages
+## 📜 Available Scripts
 
-This project is configured with two ready-to-use deployment paths:
+| Command           | Description                          |
+| ----------------- | ------------------------------------ |
+| `npm run dev`     | Starts the development server        |
+| `npm run build`   | Creates the production build         |
+| `npm run preview` | Previews the production build        |
+| `npm run deploy`  | Deploys the project using `gh-pages` |
 
-### Method A: Automated GitHub Actions (Recommended)
-The repository includes `.github/workflows/deploy.yml` which deploys automatically on every push to `main` or `master`:
-1. Push your code to GitHub:
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: complete scroll-driven hero experience"
-   git branch -M main
-   git remote add origin https://github.com/<username>/Itzfizz_Digital.git
-   git push -u origin main
-   ```
-2. In your GitHub repository:
-   - Go to **Settings** > **Pages**.
-   - Under **Build and deployment** > **Source**, select **GitHub Actions**.
-   - The workflow will automatically build and publish your site at `https://<username>.github.io/<repo-name>/`.
+---
 
-### Method B: Manual CLI Deploy (`gh-pages`)
-```bash
-# Deploys the dist folder to the gh-pages branch directly
-npm run deploy
+## 🎬 How the Animation Works
+
+The project uses two main animation systems:
+
+### 1. Intro Animation
+
+The intro animation is handled by:
+
+```text
+src/hooks/useIntroAnimation.js
 ```
 
-> **Note on Base Path**: `vite.config.js` is configured with `base: process.env.BASE_PATH || './'`, ensuring all assets load with relative paths seamlessly across any GitHub Pages repository subpath or custom domain.
+It controls the animations that happen when the page loads.
 
----
+The animation sequence includes:
 
-## 🎬 Animation Choreography & Timeline Breakdown
+* **Navbar**
 
-### 1. Initial Load Master Timeline (`useIntroAnimation.js`)
-Configured with `{ ease: "power3.out" }` and an overall duration of ~2.8 seconds:
-1. **Navigation Bar**: Slips into view from `y: -20px` with `opacity: 0 -> 1` (`0.8s`).
-2. **Letter-Masked Headline**:
-   - Each letter is isolated in an `overflow: hidden` mask.
-   - Letters reveal in a staggered sequence (`stagger: 0.055s`, `ease: "expo.out"`) rising from `y: 75px` to `0` with a subtle `rotateX: 25deg` pitch.
-3. **Aerodynamic Concept Visual**:
-   - Fades and scales from `scale: 0.9, y: 35px` to `scale: 1, y: 0` (`duration: 1.1s`), overlapping the headline at 40% of its duration (`"-=0.6s"`).
-4. **Metrics & Counter Interpolation**:
-   - Stat cards slide up with `stagger: 0.14s`.
-   - Numeric counters animate from `0` to target (e.g. `58%`, `23%`, `27%`, `40%`) via a GSAP tween on a plain JavaScript object with `snap: { val: 1 }`.
-   - Values are updated via direct DOM `textContent` mutations in `onUpdate`, completely bypassing React component re-rendering cycles.
+  * Fades in.
+  * Slides down slightly.
 
-### 2. Scroll-Driven Pinned Timeline (`useScrollAnimation.js`)
-Configured with `ScrollTrigger.create({ pin: true, anticipatePin: 1, scrub: 1.2, end: "+=200%" })`:
-- **Main Visual Path**: Moves along a multi-axis trajectory (`x: 16vw`, `y: -10vh`, `scale: 1.26`, `rotation: 6.5deg`), simulating forward velocity.
-- **Dynamic Contact Ground Shadow**: Scales down (`scaleX: 0.88, scaleY: 0.75`) and softens (`opacity: 0.35`) as the vehicle lifts into perspective.
-- **Kinetic Letter-Spacing**: Headline letters expand outward symmetrically based on their distance from center (`x: offset * 18px`), accompanied by a soft fade.
-- **Stats Parallax**: Metric cards lift upward (`y: -80px`) and fade out before the pin boundary.
-- **Lenis Inertia Sync**: Lenis scroll coordinates trigger `ScrollTrigger.update`, and GSAP's central `ticker` drives `lenis.raf`.
+* **Headline**
 
----
+  * Individual letters are animated separately.
+  * Letters rise from an overflow-hidden mask.
+  * A stagger effect creates a smooth sequence.
 
-## ⚡ Performance Engineering (Transform-Only Rules)
+* **Main Visual**
 
-To ensure sustained **60fps/120fps** performance on ProMotion and mobile devices:
-1. **Transform & Opacity Exclusivity**:
-   - Animated properties are strictly limited to `transform` (`x`, `y`, `scale`, `rotation`) and `opacity`. No layout properties (`top`, `left`, `width`, `height`, `margin`) are animated.
-2. **Composite Layer Promotion**:
-   - Key animated elements utilize `will-change: transform` and `force3D: true` to allocate dedicated GPU memory buffers.
-3. **Zero Layout Thrashing**:
-   - No `getBoundingClientRect` or `offsetHeight` reads occur inside scroll frames.
-   - Numbers count up by targeting DOM nodes directly, avoiding 60 React reconciliation passes per second.
-4. **Clean Garbage Collection & React StrictMode Safety**:
-   - All ScrollTriggers and GSAP timelines are wrapped in `gsap.context()` / `useGSAP()`, ensuring comprehensive teardown on component unmount and preventing memory leaks or orphaned event listeners.
-5. **Accessibility (`prefers-reduced-motion`)**:
-   - When the user's OS has reduced motion enabled, scrubbed pinning and staggers are disabled, presenting immediate clean static layouts.
+  * Fades into view.
+  * Scales up smoothly.
+  * Overlaps the headline for a dynamic effect.
 
----
+* **Statistics**
 
-## 📂 Project Directory Structure
+  * Cards slide upward one by one.
+  * Numbers animate from `0` to their target values.
 
+### Animation Easing
+
+The project uses GSAP easing functions such as:
+
+```text
+power3.out
+expo.out
 ```
+
+These provide smoother and more natural motion.
+
+---
+
+## 🖱️ Scroll Animation
+
+The scroll animation is handled by:
+
+```text
+src/hooks/useScrollAnimation.js
+```
+
+The hero section is pinned while the user scrolls through the animation.
+
+During scrolling:
+
+* The **main visual moves along a curved path**.
+* The visual **scales and rotates**.
+* The **ground shadow shrinks and softens**.
+* The **headline letters spread outward**.
+* The headline gradually **fades away**.
+* The **statistics move upward** using a parallax effect.
+* The animation is connected directly to **scroll progress**.
+* Scrolling upward **reverses the animation smoothly**.
+
+The animation uses a **scrubbed ScrollTrigger timeline**, allowing the animation to follow the user's scroll position.
+
+---
+
+## 🌊 Lenis Smooth Scrolling
+
+The project uses **Lenis** to create smooth and inertia-based scrolling.
+
+Lenis is synchronized with the GSAP ticker so that:
+
+* Smooth scrolling works together with GSAP.
+* ScrollTrigger receives accurate scroll updates.
+* Animations remain synchronized with scrolling.
+* The overall interaction feels more fluid.
+
+---
+
+## 📱 Responsive Design
+
+The animation is optimized for different screen sizes.
+
+### Desktop
+
+* Larger animation distances.
+* Full-size hero visual.
+* Longer scroll animation.
+* More pronounced parallax effects.
+
+### Tablet
+
+* Adjusted spacing and animation distances.
+* Responsive typography.
+* Optimized visual positioning.
+
+### Mobile
+
+* Reduced animation distances.
+* Shorter pin duration.
+* Smaller visual scale.
+* Touch-friendly layout.
+* Optimized performance.
+
+---
+
+## ♿ Accessibility
+
+The project respects the user's system-level:
+
+```text
+prefers-reduced-motion
+```
+
+When reduced motion is enabled, animations are reduced or disabled to provide a more accessible experience.
+
+---
+
+## ⚡ Performance
+
+Performance was considered throughout the implementation.
+
+### Optimization Techniques
+
+* Animates mainly **transform and opacity** properties.
+* Uses **GPU-friendly transforms**.
+* Uses `will-change` where appropriate.
+* Uses GSAP's `force3D` for animated layers.
+* Avoids unnecessary layout calculations during scrolling.
+* Avoids React re-renders on every animation frame.
+* Counter values are updated directly in the DOM.
+* Uses `useGSAP` for proper animation lifecycle management.
+* Animations are safely cleaned up when components unmount.
+* Optimized animation distances for mobile devices.
+
+---
+
+## 📂 Project Structure
+
+```text
 Itzfizz_Digital/
+│
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml            # GitHub Pages deployment automation
+│       └── deploy.yml
+│
 ├── public/
-│   ├── 404.html                  # GitHub Pages SPA fallback
-│   └── favicon.svg               # Brand favicon
+│   ├── 404.html
+│   └── favicon.svg
+│
+├── screenshots/
+│   ├── desktop-initial.png
+│   ├── desktop-mid.png
+│   ├── desktop-deep.png
+│   ├── mobile-initial.png
+│   ├── mobile-scrolled.png
+│   └── tablet-initial.png
+│
 ├── src/
+│   ├── assets/
+│   │   └── hero-car.jpg
+│   │
 │   ├── components/
-│   │   ├── FillerSection.jsx     # Narrative case studies & CTA sections
-│   │   ├── Hero.jsx              # Hero orchestrator with ref containment
-│   │   ├── HeroHeadline.jsx      # Fluid clamp() "WELCOME ITZFIZZ" letter spans
-│   │   ├── HeroVisual.jsx        # Aerodynamic concept hypercar SVG with bloom & shadow
-│   │   ├── Navbar.jsx            # Sleek agency navbar with CTA
-│   │   ├── ScrollProgress.jsx    # Top neon scroll progress indicator
-│   │   ├── StatItem.jsx          # Single metric card with DOM counter ref
-│   │   └── StatsRow.jsx          # Semantic <ul> impact metrics grid
+│   │   ├── FillerSection.jsx
+│   │   ├── Hero.jsx
+│   │   ├── HeroHeadline.jsx
+│   │   ├── HeroVisual.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── ScrollProgress.jsx
+│   │   ├── StatItem.jsx
+│   │   └── StatsRow.jsx
+│   │
 │   ├── data/
-│   │   └── stats.js              # Performance statistics dataset
+│   │   └── stats.js
+│   │
 │   ├── hooks/
-│   │   ├── useIntroAnimation.js  # Master GSAP load timeline & counter tween
-│   │   ├── useReducedMotion.js   # OS accessibility motion preference detector
-│   │   └── useScrollAnimation.js # Responsive ScrollTrigger scrub timeline
+│   │   ├── useIntroAnimation.js
+│   │   ├── useReducedMotion.js
+│   │   └── useScrollAnimation.js
+│   │
 │   ├── lib/
-│   │   └── gsap.js               # Centralized GSAP & ScrollTrigger configuration
-│   ├── App.jsx                   # Lenis smooth scroll & ticker coordinator
-│   ├── index.css                 # CSS variables, letter-masking, glassmorphism
-│   └── main.jsx                  # Application entry point
-├── index.html                    # HTML shell with Google Fonts preconnect
-├── package.json                  # Dependencies & npm scripts
-├── postcss.config.js             # PostCSS Tailwind integration
-├── tailwind.config.js            # Custom color palette & typography
-└── vite.config.js                # Vite build configuration with relative base
+│   │   └── gsap.js
+│   │
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+│
+├── index.html
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+└── vite.config.js
 ```
 
----
 
-## 💡 Architecture Extension Notes
+## 🎯 Learning Outcomes
 
-### Alternative: Bootstrap Integration
-Tailwind CSS was selected for this project to maintain strict utility-first optimization and zero CSS bloat. However, if your team prefers Bootstrap:
-- Replace the utility grid in `StatsRow.jsx` with `.container`, `.row`, and `.col-6 .col-lg-3`.
-- Replace `Navbar.jsx` with standard Bootstrap `.navbar`, `.navbar-brand`, and `.nav-link` classes.
-- *Best practice warning*: Avoid loading Bootstrap CSS simultaneously with Tailwind CSS due to conflicting reset layers and specificity collisions.
+This project helped demonstrate practical implementation of:
 
-### CMS Integration: WordPress Theme Conversion
-To adapt this hero experience into a custom WordPress theme:
-1. **Asset Enqueuing (`functions.php`)**:
-   ```php
-   function itzfizz_enqueue_scripts() {
-       wp_enqueue_style('itzfizz-main', get_template_directory_uri() . '/dist/assets/index.css', array(), '1.0.0');
-       wp_enqueue_script('itzfizz-bundle', get_template_directory_uri() . '/dist/assets/index.js', array(), '1.0.0', true);
-   }
-   add_action('wp_enqueue_scripts', 'itzfizz_enqueue_scripts');
-   ```
-2. **Template Placement (`front-page.php`)**:
-   Mount the `#root` container within `front-page.php` or render the semantic HTML shell with data-attributes populated by ACF (Advanced Custom Fields) for dynamic metric editing by marketing teams.
+* **React component architecture**
+* **GSAP animation timelines**
+* **ScrollTrigger**
+* **Scroll-based animation**
+* **Pinned sections**
+* **Scrubbed animations**
+* **Parallax effects**
+* **Smooth scrolling with Lenis**
+* **Responsive animation design**
+* **Performance optimization**
+* **Accessibility with reduced-motion support**
+* **GitHub Pages deployment**
+* **Vite production builds**
 
 ---
 
-## 📄 License
+## 🔮 Future Improvements
 
-Distributed under the MIT License. Created by Rohit Shinde for ITZFIZZ Digital.
+Possible future improvements include:
+
+* Add more interactive 3D effects.
+* Add advanced mouse-following interactions.
+* Add WebGL-based visual effects.
+* Add more sections with scroll-driven animations.
+* Add dark/light theme support.
+* Improve mobile-specific animations.
+* Add more interactive statistics.
+* Add page transition animations.
+
+---
+
+## 👨‍💻 Author
+
+**Rohit Rajendra Shinde**
+Gmail:- rohitshinde1728@gmail.com
+
+* **GitHub:** https://github.com/rohitshinde-tech
+* **Portfolio:** https://rohitshinde.xyz
+
+---
